@@ -1,0 +1,62 @@
+{
+  "name": "Vapi workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        304,
+        64
+      ],
+      "id": "2ffdb5ce-53ee-44b6-aea9-3959eff3021c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://vapi.ai",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "actionNetworkApi",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        512,
+        64
+      ],
+      "id": "20f21e1c-0f27-4c0a-bb42-3004383b9cfd",
+      "name": "HTTP Request",
+      "credentials": {
+        "actionNetworkApi": {
+          "id": "isLzuGFCVwY8rP4v",
+          "name": "Action Network account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2ebccb59-d902-414b-b781-7455e3589aa7",
+  "meta": {
+    "instanceId": "266f2fb7e85c9b0136a9c51d2cbf5d6c753a470002cb925285a9faddb03697a3"
+  },
+  "id": "6IMOJvQAfdBK6Wwg",
+  "tags": []
+}
